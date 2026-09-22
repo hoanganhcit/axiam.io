@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pricing — Axiam | Usage-Based Biometric Auth</title>
+  <!-- Tailwind CSS v3 with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="js/main.js"></script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="min-h-screen selection:bg-cyan-500 selection:text-black">
+  <!-- BEGIN: NavigationBar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/80 backdrop-blur-md border-b border-slate-800/60"
+    data-purpose="site-navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a aria-label="Axiam Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-scan w-5 h-5 text-white">
+            <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+            <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+            <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+            <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+      </a>
+      <!-- Desktop Nav Items -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-cyan-400 transition-colors" href="features.html">Features</a>
+        <a class="text-[#00e5ff] font-semibold transition-colors" href="pricing.html">Pricing</a>
+        <a class="hover:text-cyan-400 transition-colors" href="publications.html">Publications</a>
+        <a class="hover:text-cyan-400 transition-colors" href="case-study.html">Case Study</a>
+        <a class="hover:text-cyan-400 transition-colors" href="about.html">About</a>
+        <a class="hover:text-cyan-400 transition-colors" href="contact.html">Contact</a>
+      </nav>
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline-block"
+          href="#">Sign In</a>
+        <a class="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.6)]"
+          href="trial.html">
+          <span>Start Free Trial</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2.5" viewbox="0 0 24 24">
+            <line x1="5" x2="19" y1="12" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- END: NavigationBar -->
+  <main class="relative z-10 pt-16 pb-24">
+    <!-- BEGIN: HeroSection -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 text-center pt-8 pb-14" data-purpose="hero-header">
+      <!-- Pill Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-[#091528]/80 text-xs font-medium text-cyan-300 mb-8 badge-glow">
+        <span class="text-cyan-400">✦</span>
+        <span>Usage-Based Pricing</span>
+      </div>
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
+        Pay only for<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-500">what you
+          use.</span>
+      </h1>
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Start free and scale with transparent, usage-based pricing. No feature gating. No surprises.
+      </p>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: MauCalculatorCard -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 mb-20" data-purpose="calculator-container">
+      <div class="rounded-2xl bg-[#071120] border border-[#172740] p-6 sm:p-8 shadow-2xl relative backdrop-blur-xl">
+        <!-- Title & description -->
+        <h2 class="text-lg font-semibold text-white mb-1 tracking-tight">Estimate by Monthly Active Users (MAUs)</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mb-8">Drag to see your estimated monthly cost.</p>
+        <!-- Slider controls header -->
+        <div class="flex items-center justify-between text-sm font-semibold mb-3">
+          <span class="text-slate-300 font-medium text-xs sm:text-sm tracking-wide">MAUs</span>
+          <span class="text-cyan-400 font-mono text-base sm:text-lg tracking-tight" id="mau-display">10,000</span>
+        </div>
+        <!-- Custom Slider -->
+        <div class="relative w-full mb-8 flex items-center">
+          <input aria-label="Monthly Active Users Slider"
+            class="w-full h-2 rounded-lg cursor-pointer appearance-none bg-slate-800" id="mau-slider" max="300000"
+            min="1000" step="1000" type="range" value="10000" />
+        </div>
+        <!-- Stats Metric Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 text-center">
+          <div class="bg-[#0b182d]/70 rounded-xl p-4 border border-[#162744]">
+            <div class="text-xs text-slate-400 font-medium mb-1">Price / MAU</div>
+            <div class="text-xl sm:text-2xl font-bold text-white tracking-tight font-mono" id="price-per-mau">$0.05
+            </div>
+          </div>
+          <div class="bg-[#0b182d]/70 rounded-xl p-4 border border-[#162744]">
+            <div class="text-xs text-slate-400 font-medium mb-1">Est. Monthly</div>
+            <div class="text-xl sm:text-2xl font-bold text-cyan-400 tracking-tight font-mono" id="est-monthly">$250
+            </div>
+          </div>
+          <div class="bg-[#0b182d]/70 rounded-xl p-4 border border-[#162744]">
+            <div class="text-xs text-slate-400 font-medium mb-1">Tier</div>
+            <div class="text-lg sm:text-xl font-bold text-white tracking-tight mt-0.5" id="tier-name">Pay-as-you-go
+            </div>
+          </div>
+        </div>
+        <!-- Tier breakdown tags -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-2 text-[11px] sm:text-xs">
+          <span
+            class="px-2.5 py-1 rounded-md bg-[#0d1e38] text-slate-300 border border-slate-700/60 font-medium transition-colors"
+            id="tag-free">
+            <span class="text-cyan-400 font-semibold">Free</span> · ≤ 5,000 - $0
+          </span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-cyan-950/60 text-cyan-200 border border-cyan-500/50 font-medium transition-colors"
+            id="tag-payg">
+            <span class="text-cyan-400 font-semibold">Pay-as-you-go</span> · 5k – 50k - $0.05/MAU
+          </span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-[#0d1e38] text-slate-300 border border-slate-700/60 font-medium transition-colors"
+            id="tag-growth">
+            <span class="text-cyan-400 font-semibold">Growth</span> · 50k – 200k - $0.04/MAU
+          </span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-[#0d1e38] text-slate-300 border border-slate-700/60 font-medium transition-colors"
+            id="tag-scale">
+            <span class="text-cyan-400 font-semibold">Scale</span> · 200k+ - $0.03/MAU
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- END: MauCalculatorCard -->
+    <!-- BEGIN: PricingCards -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 mb-28" data-purpose="pricing-cards-section" id="pricing">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
+        <!-- Card 1: Free -->
+        <div
+          class="rounded-2xl bg-[#071120]/90 border border-[#16253c] p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition duration-300">
+          <div>
+            <h3 class="text-base font-semibold text-white mb-2">Free</h3>
+            <div class="flex items-baseline gap-1 mb-2">
+              <span class="text-4xl font-extrabold text-white tracking-tight">$0</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">Up to 5,000 MAUs. Start building at no cost.</p>
+            <ul class="space-y-3.5 text-xs sm:text-sm text-slate-300 mb-8 border-t border-[#121f35] pt-6">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 5,000 MAUs</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>All core features</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>SDKs &amp; REST APIs</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Liveness detection</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Passkey / passwordless flows</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Email support</span>
+              </li>
+            </ul>
+          </div>
+          <a class="w-full py-2.5 px-4 rounded-xl border border-slate-700/80 bg-[#121f33]/60 hover:bg-[#15253e] hover:border-slate-600 text-sm font-semibold text-white text-center transition flex items-center justify-center gap-1.5 group"
+            href="#start">
+            Start Free <span class="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+        <!-- Card 2: Pay-as-you-go (Featured) -->
+        <div
+          class="relative rounded-2xl bg-[#081426] border-2 border-cyan-400/80 p-6 sm:p-7 flex flex-col justify-between cyan-glow scale-[1.02] z-20">
+          <!-- Popover Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span
+              class="px-3.5 py-1 rounded-full bg-cyan-400 text-black text-[10px] font-extrabold uppercase tracking-wider shadow-md">
+              MOST POPULAR
+            </span>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-cyan-400 mb-2">Pay-as-you-go</h3>
+            <div class="flex items-baseline gap-1 mb-2">
+              <span class="text-4xl font-extrabold text-white tracking-tight">$0.05</span>
+              <span class="text-xs sm:text-sm text-slate-400 font-medium">/MAU</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">For growing teams. Volume discounts apply automatically.
+            </p>
+            <ul class="space-y-3.5 text-xs sm:text-sm text-slate-200 mb-8 border-t border-[#1a2f4d] pt-6">
+              <li class="flex items-center gap-3 font-medium text-white">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Everything in Free</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>5,001 – 50,000 MAUs @ $0.05</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>50k – 200k MAUs @ $0.04</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>200k+ MAUs @ $0.03</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Webhooks &amp; audit trails</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Custom branding (add-on)</span>
+              </li>
+            </ul>
+          </div>
+          <a class="w-full py-2.5 px-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-sm text-center shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_28px_rgba(0,229,255,0.6)] transition-all flex items-center justify-center gap-1.5 group"
+            href="#trial">
+            Start Free Trial <span class="transition-transform group-hover:translate-x-1 font-extrabold">→</span>
+          </a>
+        </div>
+        <!-- Card 3: Enterprise -->
+        <div
+          class="rounded-2xl bg-[#071120]/90 border border-[#16253c] p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition duration-300">
+          <div>
+            <h3 class="text-base font-semibold text-purple-400 mb-2">Enterprise</h3>
+            <div class="flex items-baseline gap-1 mb-2">
+              <span class="text-4xl font-extrabold text-white tracking-tight">Custom</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">Advanced security, compliance &amp; dedicated SLAs.</p>
+            <ul class="space-y-3.5 text-xs sm:text-sm text-slate-300 mb-4 border-t border-[#121f35] pt-6">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>99.999% uptime SLA</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated support</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>SOC 2, GDPR, HIPAA*</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Custom contract &amp; DPA</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Volume pricing for large MAU</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                  viewbox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Annual commitment discounts</span>
+              </li>
+            </ul>
+            <p class="text-[11px] text-slate-500 mb-6 italic">* Available upon request and scope.</p>
+          </div>
+          <a class="w-full py-2.5 px-4 rounded-xl bg-[#241846] hover:bg-[#2e1f58] border border-purple-500/30 hover:border-purple-400/50 text-purple-200 text-sm font-semibold text-center transition flex items-center justify-center gap-1.5 group"
+            href="#contact">
+            Talk to Sales <span class="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- END: PricingCards -->
+    <!-- BEGIN: ComparisonTable -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 mb-28" data-purpose="comparison-matrix">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">What's included</h2>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-[#172740] bg-[#071120]">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-[#14233a] bg-[#091526]/80">
+              <th class="py-4 px-5 sm:px-6 font-semibold text-slate-300 w-2/5">Capability</th>
+              <th class="py-4 px-4 font-semibold text-cyan-400 text-center w-1/5">Facial Sign-In</th>
+              <th class="py-4 px-4 font-semibold text-purple-300 text-center w-1/5">FaceLock</th>
+              <th class="py-4 px-4 font-semibold text-cyan-400 text-center w-1/5">Bastion + Face</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#121f35] text-slate-300">
+            <!-- Row 1 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">SDKs &amp; REST APIs</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Liveness detection</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+            <!-- Row 3 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Passkey / Passwordless flows</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+            </tr>
+            <!-- Row 4 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Encrypt files / photos / videos</td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+            </tr>
+            <!-- Row 5 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Zero-knowledge design</td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+            <!-- Row 6 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Secure gateway w/ face</td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+              <td class="py-3.5 px-4 text-center text-slate-600">—</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+            <!-- Row 7 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Audit logs &amp; webhooks</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+            <!-- Row 8 -->
+            <tr class="hover:bg-[#0c182c]/40 transition-colors">
+              <td class="py-3.5 px-5 sm:px-6 font-medium text-slate-200">Custom branding (add-on)</td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+              <td class="py-3.5 px-4 text-center"><span class="inline-flex text-cyan-400">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- END: ComparisonTable -->
+    <!-- BEGIN: FAQSection -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 mb-24" data-purpose="faq-section">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3.5" id="faq-accordion">
+        <!-- FAQ Item 1 -->
+        <div class="rounded-xl border border-[#172740] bg-[#071120]/80 p-5 transition-colors">
+          <h3 class="text-sm sm:text-base font-semibold text-white mb-2">How do you count MAUs?</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            A unique user who completes at least one successful authentication or encryption operation in a monthly
+            billing period counts as one MAU.
+          </p>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div class="rounded-xl border border-[#172740] bg-[#071120]/80 p-5 transition-colors">
+          <h3 class="text-sm sm:text-base font-semibold text-white mb-2">Is the Free tier really free?</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Yes. You can use up to 5,000 MAUs across services without charge to prototype and launch.
+          </p>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="rounded-xl border border-[#172740] bg-[#071120]/80 p-5 transition-colors">
+          <h3 class="text-sm sm:text-base font-semibold text-white mb-2">What about compliance?</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Enterprise plans can include support for SOC 2, GDPR, and HIPAA depending on scope and data flows.
+          </p>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="rounded-xl border border-[#172740] bg-[#071120]/80 p-5 transition-colors">
+          <h3 class="text-sm sm:text-base font-semibold text-white mb-2">Do you offer annual discounts?</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Yes — speak with sales for usage-based annual commitments and savings.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END: FAQSection -->
+  </main>
+  <!-- BEGIN: Footer -->
+  <footer class="border-t border-white/5 bg-[#050810]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-scan w-5 h-5 text-white">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed">The future of enterprise authentication. Secure,
+            seamless, instant.</p>
+          <div class="flex items-center gap-2 mt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-cyan-400">
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+              </path>
+            </svg><span class="text-xs text-slate-500">SOC 2 Type II Certified</span></div>
+          <div class="flex items-center gap-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-lock w-4 h-4 text-violet-400">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg><span class="text-xs text-slate-500">ISO 27001 Compliant</span></div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Product</h4>
+          <ul class="space-y-3">
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                href="features.html">Features</a></li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="pricing.html">Pricing</a>
+            </li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="contact.html">Security</a>
+            </li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                href="contact.html">Integrations</a></li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="api-docs.html">API
+                Docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Company</h4>
+          <ul class="space-y-3">
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="about.html">About</a></li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="contact.html">Contact</a>
+            </li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="contact.html">Careers</a>
+            </li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="contact.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Legal</h4>
+          <ul class="space-y-3">
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="api-docs.html">Privacy
+                Policy</a></li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="api-docs.html">Terms of
+                Service</a></li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="api-docs.html">GDPR</a>
+            </li>
+            <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors" href="api-docs.html">Cookie
+                Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-600 text-sm">© 2026 Axiam Technologies Inc. All rights reserved.</p>
+        <p class="text-slate-600 text-sm">Built for the enterprise. Secured to the core.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+</body>
+
+</html>

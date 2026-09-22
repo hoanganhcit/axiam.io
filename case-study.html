@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Bastion Host + Facial Sign-In Traces a Ransomware Hacker to Justice | Axiam Case Study</title>
+  <!-- Shared Tailwind, behavior, and theme assets -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" crossorigin href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#030712] text-slate-400 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen">
+  <!-- BEGIN: MainHeader -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/80 backdrop-blur-md border-b border-slate-800/60"
+    data-purpose="site-navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a aria-label="Axiam Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+                <div
+                    class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scan w-5 h-5 text-white">
+                        <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                        <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                        <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+            </a>
+      <!-- Desktop Nav Items -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-cyan-400 transition-colors" href="features.html">Features</a>
+        <a class="hover:text-cyan-400 transition-colors" href="pricing.html">Pricing</a>
+        <a class="hover:text-cyan-400 transition-colors" href="publications.html">Publications</a>
+        <a class="text-[#00e5ff] font-semibold transition-colors" href="case-study.html">Case Study</a>
+        <a class="hover:text-cyan-400 transition-colors" href="about.html">About</a>
+        <a class="hover:text-cyan-400 transition-colors" href="contact.html">Contact</a>
+      </nav>
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline-block"
+          href="#">Sign In</a>
+        <a class="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.6)]"
+          href="trial.html">
+          <span>Start Free Trial</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2.5" viewbox="0 0 24 24">
+            <line x1="5" x2="19" y1="12" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="relative pt-36 pb-16 overflow-hidden">
+      <!-- Background Ambient Glows -->
+      <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-400/5 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-violet-600/5 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <!-- Feature Tags Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-6"><span
+            class="px-3 py-1 rounded-full glass border border-cyan-400/20 text-cyan-400 text-xs font-medium">Passwordless</span><span
+            class="px-3 py-1 rounded-full glass border border-cyan-400/20 text-cyan-400 text-xs font-medium">Phishing-resistant</span><span
+            class="px-3 py-1 rounded-full glass border border-cyan-400/20 text-cyan-400 text-xs font-medium">Zero Public
+            IP</span><span
+            class="px-3 py-1 rounded-full glass border border-cyan-400/20 text-cyan-400 text-xs font-medium">Audit-ready</span>
+        </div>
+        <!-- Main Case Study Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-[1.15] mb-6">
+          <span class="text-white block">Bastion Host + Facial Sign-In</span>
+          <span class="gradient-text-cyan block mt-1">Traces a Ransomware Hacker</span>
+          <span class="gradient-text-purple block mt-1">to Justice</span>
+        </h1>
+        <!-- Subtitle Context -->
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
+          How a mid-sized Canadian investment firm used Axiam's Bastion Host with liveness-verified Facial Sign-In to
+          block an intrusion, produce court-ready identity evidence, and enable prosecution — without paying ransom.
+        </p>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: ImpactSummary -->
+    <section class="py-16 border-y border-white/5 bg-[#0D1526]/40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12"><span
+            class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Impact Summary</span></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 bg-cyan-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-dollar-sign w-6 h-6 text-cyan-400">
+                <line x1="12" x2="12" y1="2" y2="22"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg></div>
+            <div class="text-3xl font-bold mb-2 text-cyan-400">$1.54M</div>
+            <div class="text-slate-500 text-sm">Avg. ransom avoided / incident</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 bg-violet-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-clock w-6 h-6 text-violet-400">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg></div>
+            <div class="text-3xl font-bold mb-2 text-violet-400">23 Days</div>
+            <div class="text-slate-500 text-sm">Downtime avoided</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 bg-cyan-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-users w-6 h-6 text-cyan-400">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg></div>
+            <div class="text-3xl font-bold mb-2 text-cyan-400">+12%</div>
+            <div class="text-slate-500 text-sm">Client acquisition post-incident</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 bg-violet-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-gavel w-6 h-6 text-violet-400">
+                <path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"></path>
+                <path d="m16 16 6-6"></path>
+                <path d="m8 8 6-6"></path>
+                <path d="m9 7 8 8"></path>
+                <path d="m21 11-8-8"></path>
+              </svg></div>
+            <div class="text-3xl font-bold mb-2 text-violet-400">5 Years</div>
+            <div class="text-slate-500 text-sm">Sentence of offender</div>
+          </div>
+        </div>
+        <p class="text-slate-600 text-xs text-center mt-6">* Benchmarks &amp; internal analysis; customize per client.
+        </p>
+      </div>
+    </section>
+    <!-- END: ImpactSummary -->
+    <!-- BEGIN: CustomerAndChallenge -->
+    <section class="py-24">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+        <div class="glass rounded-2xl p-8 border border-cyan-400/15">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-users w-5 h-5 text-cyan-400">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg></div>
+            <h3 class="text-xl font-bold text-white">Customer</h3>
+          </div>
+          <p class="text-white font-semibold mb-2">FTBC Capital</p>
+          <p class="text-slate-400 text-sm leading-relaxed">A Canadian investment management firm overseeing $1B AUA.
+            Targets of repeat ransomware attempts by the ShadowCrypt group.</p>
+        </div>
+        <div class="glass rounded-2xl p-8 border border-violet-400/15">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-violet-400/10 flex items-center justify-center"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-shield-check w-5 h-5 text-violet-400">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                </path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg></div>
+            <h3 class="text-xl font-bold text-white">Challenge</h3>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2.5 text-slate-400 text-sm leading-relaxed"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-check-big w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5">
+                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                <path d="m9 11 3 3L22 4"></path>
+              </svg>Prevent privileged access compromise without relying on passwords/MFA.</li>
+            <li class="flex items-start gap-2.5 text-slate-400 text-sm leading-relaxed"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-check-big w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5">
+                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                <path d="m9 11 3 3L22 4"></path>
+              </svg>Eliminate exposed network surfaces (no public IPs, no brute-force).</li>
+            <li class="flex items-start gap-2.5 text-slate-400 text-sm leading-relaxed"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-check-big w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5">
+                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                <path d="m9 11 3 3L22 4"></path>
+              </svg>Create non-repudiable identity evidence to support prosecution.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- END: CustomerAndChallenge -->
+    <!-- BEGIN: IncidentTimeline -->
+    <section class="py-24 bg-[#0D1526]/40 border-y border-white/5">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16"><span
+            class="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Incident Timeline</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">How the attack unfolded — and failed</h2>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/30 via-violet-400/30 to-transparent hidden md:block">
+          </div>
+          <div class="space-y-6">
+            <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row">
+              <div class="flex-1 md:text-right">
+                <div class="glass rounded-2xl p-6 border border-white/5"><span
+                    class="text-sm font-bold text-cyan-400">T-0</span>
+                  <h3 class="text-white font-bold mt-1 mb-2">Spear-phish attempt</h3>
+                  <p class="text-slate-400 text-sm">Malicious link clicked; credential harvesting fails — no passwords
+                    exist.</p>
+                </div>
+              </div>
+              <div class="w-4 h-4 rounded-full flex-shrink-0 border-2 border-[#080C14] bg-cyan-400 relative z-10"></div>
+              <div class="flex-1"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
+              <div class="flex-1 md:text-right"></div>
+              <div class="w-4 h-4 rounded-full flex-shrink-0 border-2 border-[#080C14] bg-violet-400 relative z-10">
+              </div>
+              <div class="flex-1">
+                <div class="glass rounded-2xl p-6 border border-white/5"><span
+                    class="text-sm font-bold text-violet-400">T+1h</span>
+                  <h3 class="text-white font-bold mt-1 mb-2">Blocked Brute-Force</h3>
+                  <p class="text-slate-400 text-sm">SSH/RDP scans hit bastion; biometric gate stops sessions pre-auth.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row">
+              <div class="flex-1 md:text-right">
+                <div class="glass rounded-2xl p-6 border border-white/5"><span
+                    class="text-sm font-bold text-cyan-400">T+2h</span>
+                  <h3 class="text-white font-bold mt-1 mb-2">Insider Assist Fails</h3>
+                  <p class="text-slate-400 text-sm">Liveness challenge records attacker's face at insider device.</p>
+                </div>
+              </div>
+              <div class="w-4 h-4 rounded-full flex-shrink-0 border-2 border-[#080C14] bg-cyan-400 relative z-10"></div>
+              <div class="flex-1"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-6 md:flex-row-reverse">
+              <div class="flex-1 md:text-right"></div>
+              <div class="w-4 h-4 rounded-full flex-shrink-0 border-2 border-[#080C14] bg-violet-400 relative z-10">
+              </div>
+              <div class="flex-1">
+                <div class="glass rounded-2xl p-6 border border-white/5"><span
+                    class="text-sm font-bold text-violet-400">T+2d</span>
+                  <h3 class="text-white font-bold mt-1 mb-2">Law Enforcement</h3>
+                  <p class="text-slate-400 text-sm">Audit video + device/geo metadata shared with RCMP cybercrime.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: IncidentTimeline -->
+    <!-- BEGIN: EvidencePillars -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16" style="opacity: 1; transform: none;"><span
+            class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Evidence Pillars</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">From anonymous incident to prosecutable case</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all group"
+            style="opacity: 1; transform: none;">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center bg-cyan-400/10 group-hover:bg-cyan-400/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-video w-6 h-6 text-cyan-400">
+                  <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path>
+                  <rect x="2" y="6" width="14" height="12" rx="2"></rect>
+                </svg></div><span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Pillar 1</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Biometric Audit Trail</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Liveness check captures attacker face; tamper-evident
+              video hash archived.</p>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all group"
+            style="opacity: 1; transform: none;">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center bg-violet-400/10 group-hover:bg-violet-400/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-map-pin w-6 h-6 text-violet-400">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg></div><span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Pillar 2</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Attribution Metadata</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Device fingerprint + IP/geo context correlated with
+              existing case files.</p>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all group"
+            style="opacity: 1; transform: none;">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center bg-cyan-400/10 group-hover:bg-cyan-400/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-file-check w-6 h-6 text-cyan-400">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="m9 15 2 2 4-4"></path>
+                </svg></div><span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Pillar 3</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Court-Ready Exports</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Time-stamped session logs + chain-of-custody package for
+              prosecutors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: EvidencePillars -->
+    <!-- BEGIN: ResultsSection -->
+    <section class="py-24 bg-[#0D1526]/40 border-y border-white/5">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16" ><span
+            class="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Results</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Zero ransom. Zero downtime. Full justice.</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-8 border border-white/5 text-center"
+            >
+            <div class="text-3xl md:text-4xl font-bold mb-3 text-cyan-400">$0</div>
+            <div class="text-slate-500 text-sm">Ransom Paid</div>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 text-center"
+            >
+            <div class="text-3xl md:text-4xl font-bold mb-3 text-violet-400">0h</div>
+            <div class="text-slate-500 text-sm">Service Downtime</div>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 text-center"
+            >
+            <div class="text-3xl md:text-4xl font-bold mb-3 text-cyan-400">-0.0%</div>
+            <div class="text-slate-500 text-sm">Customer Churn</div>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 text-center"
+            >
+            <div class="text-3xl md:text-4xl font-bold mb-3 text-violet-400">5-year sentence</div>
+            <div class="text-slate-500 text-sm">Offender Outcome</div>
+          </div>
+        </div>
+        <blockquote class="mt-12 glass rounded-2xl p-8 border border-cyan-400/15 relative"
+          >
+          <div class="absolute top-4 left-6 text-cyan-400/30 text-5xl font-serif leading-none">"</div>
+          <p class="text-slate-300 text-lg leading-relaxed italic pl-8">With Axiam's Bastion + Facial Sign-In, there
+            were no credentials to steal and no public IPs to probe. The audit video made the difference — turning an
+            anonymous incident into a prosecutable case.</p>
+          <footer class="text-cyan-400 text-sm font-semibold mt-4 pl-8">— CISO, FTBC Capital</footer>
+        </blockquote>
+        <p class="text-slate-600 text-xs text-center mt-6">Figures are representative; update with your verified
+          metrics.</p>
+      </div>
+    </section>
+    <!-- END: ResultsSection -->
+    <!-- BEGIN: ArchitectureSnapshot -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16" ><span
+            class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Architecture
+            Snapshot</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Three layers. Zero attack surface.</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+            >
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-cyan-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-camera w-6 h-6 text-cyan-400">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
+                </path>
+                <circle cx="12" cy="13" r="3"></circle>
+              </svg></div>
+            <h3 class="text-lg font-bold text-white mb-4">Client Device</h3>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Camera + liveness prompts</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Face template encrypted on device</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>No secrets stored locally</li>
+            </ul>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+            >
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-violet-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-server w-6 h-6 text-violet-400">
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                <line x1="6" x2="6.01" y1="6" y2="6"></line>
+                <line x1="6" x2="6.01" y1="18" y2="18"></line>
+              </svg></div>
+            <h3 class="text-lg font-bold text-white mb-4">Axiam Bastion</h3>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-violet-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Face-verified token issuance</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-violet-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Policy/segmentation enforcement</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-violet-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>SIEM/SOC streaming</li>
+            </ul>
+          </div>
+          <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+            >
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-cyan-400/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-database w-6 h-6 text-cyan-400">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                <path d="M3 12A9 3 0 0 0 21 12"></path>
+              </svg></div>
+            <h3 class="text-lg font-bold text-white mb-4">Protected Resources</h3>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Servers • VPN • DB • Apps</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Privileged access only</li>
+              <li class="flex items-start gap-2 text-slate-400 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 flex-shrink-0 mt-0.5 text-cyan-400">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Full session recording</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: ArchitectureSnapshot -->
+    <!-- BEGIN: CallToAction -->
+    <section class="py-28">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <div class="relative glass rounded-3xl p-12 md:p-16 border border-cyan-400/10 overflow-hidden"
+          >
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-violet-600/5 pointer-events-none"></div>
+          <div class="relative z-10"><span
+              class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Bring Verified Identity
+              to Your Perimeter</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Retire passwords and weak MFA.<br>Gate every
+              privileged session with a verified face.</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10 max-w-2xl mx-auto">
+              <div class="flex items-center gap-2 text-slate-300 text-sm justify-center md:justify-start"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 text-cyan-400 flex-shrink-0">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Phishing/MitM resistant</div>
+              <div class="flex items-center gap-2 text-slate-300 text-sm justify-center md:justify-start"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 text-cyan-400 flex-shrink-0">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>No keys to manage</div>
+              <div class="flex items-center gap-2 text-slate-300 text-sm justify-center md:justify-start"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 text-cyan-400 flex-shrink-0">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>No public IP exposure</div>
+              <div class="flex items-center gap-2 text-slate-300 text-sm justify-center md:justify-start"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big w-4 h-4 text-cyan-400 flex-shrink-0">
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>Court-ready audit trail</div>
+            </div><a
+              class="inline-flex items-center gap-2 px-10 py-5 rounded-xl font-bold text-[#080C14] bg-cyan-400 hover:bg-cyan-300 transition-all duration-200 text-lg glow-cyan"
+              href="/contact">Request Demo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: CallToAction -->
+  </main>
+  <!-- BEGIN: MainFooter -->
+  <footer class="border-t border-white/5 bg-[#050810]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scan w-5 h-5 text-white">
+                                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">The future of enterprise authentication. Secure,
+                        seamless, instant.</p>
+                    <div class="flex items-center gap-2 mt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shield w-4 h-4 text-cyan-400">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                            </path>
+                        </svg><span class="text-xs text-slate-500">SOC 2 Type II Certified</span></div>
+                    <div class="flex items-center gap-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock w-4 h-4 text-violet-400">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg><span class="text-xs text-slate-500">ISO 27001 Compliant</span></div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="features.html">Features</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="pricing.html">Pricing</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Security</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Integrations</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">API
+                                Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="about.html">About</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Contact</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Careers</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Privacy Policy</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Terms of Service</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">GDPR</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-600 text-sm">© 2026 Axiam Technologies Inc. All rights reserved.</p>
+                <p class="text-slate-600 text-sm">Built for the enterprise. Secured to the core.</p>
+            </div>
+        </div>
+    </footer>
+  <!-- END: MainFooter -->
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bastion Host + Facial Sign-In Traces a Ransomware Hacker to Justice | Axiam Case Study</title>
+    <!-- Shared Tailwind, behavior, and theme assets -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" crossorigin href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#030712] text-slate-400 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen">
+    <!-- BEGIN: MainHeader -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/80 backdrop-blur-md border-b border-slate-800/60"
+        data-purpose="site-navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a aria-label="Axiam Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+                <div
+                    class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scan w-5 h-5 text-white">
+                        <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                        <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                        <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+            </a>
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a class="hover:text-cyan-400 transition-colors" href="features.html">Features</a>
+                <a class="hover:text-cyan-400 transition-colors" href="pricing.html">Pricing</a>
+                <a class="hover:text-cyan-400 transition-colors" href="publications.html">Publications</a>
+                <a class="hover:text-cyan-400 transition-colors" href="case-study.html">Case Study</a>
+                <a class="text-[#00e5ff] font-semibold transition-colors" href="about.html">About</a>
+                <a class="hover:text-cyan-400 transition-colors" href="contact.html">Contact</a>
+            </nav>
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-4">
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline-block"
+                    href="#">Sign In</a>
+                <a class="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.6)]"
+                    href="trial.html">
+                    <span>Start Free Trial</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+                        <line x1="5" x2="19" y1="12" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+    <main>
+        <!-- BEGIN: HeroSection -->
+        <section class="pt-36 pb-20 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-400/4 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-8"
+                   ><span
+                        class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>Our Mission</div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-[1.15] mb-6 text-white">Authentication
+                    should be<br><span class="gradient-text">invisible to humans.</span></h1>
+                <p class="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed"
+                   >Axiam was founded on the belief that the security tax —
+                    forgotten passwords, SMS codes, authentication apps — should be eliminated. Your face is your key.
+                </p>
+            </div>
+        </section>
+        <!-- END: HeroSection -->
+        <section class="py-20 bg-[#0D1526]/40 border-y border-white/5">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-12"><span
+                        class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Our
+                        Story</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">The Journey Behind Axiam</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">From costly account takeovers to passwordless,
+                        live-person authentication. Axiam secures identities with privacy-first facial sign-in.</p>
+                </div>
+                <div class="space-y-6 text-slate-400 leading-relaxed text-lg max-w-3xl mx-auto">
+                    <p>For more than fifteen years as a Chief Technology Officer,
+                        Henry Quach saw firsthand the immense cost of user account takeovers. Each breach meant more
+                        than stolen data—it led to days of recovery, lost productivity, shaken client confidence, and in
+                        some cases millions of dollars in damage. Even with the strongest defenses—complex passwords,
+                        multi-factor authentication, and hardware tokens—attackers found ways in. Phishing fooled
+                        employees, SIM swapping bypassed text-based MFA, and malware silently harvested codes. Every
+                        incident reinforced a painful reality: traditional security leaves organizations vulnerable and
+                        expensive to repair.</p>
+                    <p>The breaking point came when a high-value corporate account
+                        was hijacked despite multiple security layers. Stolen credentials and bypassed MFA opened the
+                        door, resulting in operational disruption and lasting reputational harm. Henry recognized the
+                        core weakness—any system built on shared secrets can be stolen, guessed, or phished.</p>
+                    <p>Determined to eliminate this costly threat, Henry pioneered
+                        Facial Sign-In as a Service. Unlike passwords or codes, a face cannot be stolen, written down,
+                        or intercepted. With biometric verification, liveness detection, and end-to-end encrypted
+                        templates, the system shuts down the attack vectors that drive account takeover. There are no
+                        passwords to phish, no codes to intercept, and no tokens to misplace. Hackers cannot replicate a
+                        live, breathing identity in real time.</p>
+                    <p>Today, Henry champions facial sign-in as more than a
+                        convenience—it is a critical defense against one of the most expensive and pervasive cyber
+                        threats of our time. By authenticating people through their true identity, organizations gain
+                        faster, more private, and enterprise-grade protection. His journey underscores a powerful truth:
+                        the path to stopping account takeovers begins by removing the very tools attackers exploit.
+                        Facial sign-in is that path.</p>
+                </div>
+                <div class="relative glass rounded-2xl p-8 md:p-10 border border-cyan-400/15 mt-12 max-w-2xl mx-auto"
+                   ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-quote absolute top-6 left-6 w-8 h-8 text-cyan-400/20">
+                        <path
+                            d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                        </path>
+                        <path
+                            d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                        </path>
+                    </svg>
+                    <p class="text-xl md:text-2xl font-medium text-white leading-relaxed mb-4 pl-10">"Any system built
+                        on shared secrets can be stolen, guessed, or phished."</p>
+                    <p class="text-cyan-400 font-semibold pl-10">— Henry Quach, Founder</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mt-12">
+                    <div class="glass rounded-2xl p-7 border border-red-500/10">
+                        <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span
+                                class="w-2 h-2 rounded-full bg-red-400"></span> The Cost of Account Takeovers</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-red-400 mt-1">✕</span> Days of recovery and operational disruption</li>
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-red-400 mt-1">✕</span> Lost productivity and shaken client confidence
+                            </li>
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-red-400 mt-1">✕</span> Damages reaching millions of dollars</li>
+                        </ul>
+                    </div>
+                    <div class="glass rounded-2xl p-7 border border-orange-500/10">
+                        <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span
+                                class="w-2 h-2 rounded-full bg-orange-400"></span> How Attackers Get In</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-orange-400 mt-1">✕</span> Phishing that tricks employees</li>
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-orange-400 mt-1">✕</span> SIM swapping to bypass SMS-based MFA</li>
+                            <li class="flex items-start gap-2.5 text-slate-400 text-sm"><span
+                                    class="text-orange-400 mt-1">✕</span> Malware harvesting one-time codes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">What drives us</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+                       >
+                        <div class="w-2 h-12 rounded-full bg-gradient-to-b from-cyan-400 to-violet-600 mb-6"></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Security Without Compromise</h3>
+                        <p class="text-slate-400 leading-relaxed">We believe security and usability are not trade-offs.
+                            Axiam proves that the most secure option can also be the most seamless.</p>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+                       >
+                        <div class="w-2 h-12 rounded-full bg-gradient-to-b from-cyan-400 to-violet-600 mb-6"></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Privacy by Design</h3>
+                        <p class="text-slate-400 leading-relaxed">Biometric data is treated as sacred. Our architecture
+                            minimizes data retention and gives users full control over their identity.</p>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all"
+                       >
+                        <div class="w-2 h-12 rounded-full bg-gradient-to-b from-cyan-400 to-violet-600 mb-6"></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Enterprise Reliability</h3>
+                        <p class="text-slate-400 leading-relaxed">With 99.99% uptime and a global edge network, Axiam is
+                            built for the reliability demands of the world's largest organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-[#0D1526]/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16"><span
+                        class="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-4 block">Security
+                        Certifications</span>
+                    <h2 class="text-4xl font-bold text-white mb-4">Certified. Audited. Trusted.</h2>
+                    <p class="text-slate-400 text-lg max-w-xl mx-auto">Axiam undergoes rigorous independent audits and
+                        maintains the certifications that enterprise security teams require.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all flex gap-6"
+                       >
+                        <div
+                            class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-cyan-400/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shield w-7 h-7 text-cyan-400">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2">SOC 2 Type II</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Annual third-party security audit
+                                confirming our controls for security, availability, and confidentiality.</p>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all flex gap-6"
+                       >
+                        <div
+                            class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-violet-400/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-award w-7 h-7 text-violet-400">
+                                <path
+                                    d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                                </path>
+                                <circle cx="12" cy="8" r="6"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2">ISO 27001</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">International standard for information
+                                security management systems, certified by an accredited body.</p>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all flex gap-6"
+                       >
+                        <div
+                            class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-cyan-400/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-7 h-7 text-cyan-400">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2">GDPR Compliant</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Full compliance with EU General Data
+                                Protection Regulation, with built-in user consent tools and data portability.</p>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-cyan-400/20 transition-all flex gap-6"
+                       >
+                        <div
+                            class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-violet-400/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shield w-7 h-7 text-violet-400">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2">FIDO2 / WebAuthn</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Axiam's biometric authentication aligns
+                                with the FIDO Alliance's open authentication standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16"><span
+                        class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block flex items-center justify-center gap-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-users w-4 h-4">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg> Leadership</span>
+                    <h2 class="text-4xl font-bold text-white mb-4">The people behind Axiam</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">Driven by a vision to eliminate account
+                        takeovers through advanced biometric and AI technology tailored for enterprise-level security.
+                    </p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative glass rounded-3xl p-10 md:p-12 border border-cyan-400/15 hover:border-cyan-400/30 transition-all overflow-hidden group"
+                       >
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-violet-600/5 pointer-events-none">
+                        </div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8">
+                            <div class="relative flex-shrink-0">
+                                <div
+                                    class="absolute -inset-1 rounded-full bg-gradient-to-br from-cyan-400/40 to-violet-600/40 blur-md opacity-60 group-hover:opacity-100 transition-opacity">
+                                </div><img
+                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699f3a6bfd5d710f6a044eb6/f154e539b_generated_image.png"
+                                    alt="Henry Quach"
+                                    class="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-2 border-cyan-400/30">
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-1">Henry Quach</h3>
+                                <p class="text-cyan-400 text-base font-semibold mb-5">Founder</p>
+                                <p class="text-slate-400 leading-relaxed mb-6">Henry is a hands-on Software Engineering
+                                    leader with over 20 years of experience in Embedded Systems and Backend Software
+                                    Engineering. He is recognized for his exceptional ability to break down complex
+                                    engineering challenges into practical, implementable solutions. Henry holds a Master
+                                    of Science degree from the University of Saskatchewan and a Bachelor of Engineering
+                                    degree from McMaster University.</p>
+                                <div class="flex flex-wrap gap-2 justify-center md:justify-start"><span
+                                        class="text-xs glass px-3 py-1.5 rounded-full border border-cyan-400/20 text-cyan-400 font-medium">20+
+                                        years experience</span><span
+                                        class="text-xs glass px-3 py-1.5 rounded-full border border-white/5 text-slate-300 font-medium">M.Sc.
+                                        University of Saskatchewan</span><span
+                                        class="text-xs glass px-3 py-1.5 rounded-full border border-white/5 text-slate-300 font-medium">B.Eng.
+                                        McMaster University</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-[#0D1526]/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16"><span
+                        class="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-4 block flex items-center justify-center gap-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-star w-4 h-4">
+                            <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                            </path>
+                        </svg> Advisory Board</span>
+                    <h2 class="text-4xl font-bold text-white mb-4">Guided by world-class experts</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">Our advisory board is comprised of distinguished
+                        industry experts whose invaluable advice and strategic insights keep us at the forefront of our
+                        field.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-violet-400/20 transition-all flex items-center gap-5"
+                       ><img
+                            src="https://dashboard.axiam.io/assets/Dino-Trevisani-f7d4028ccf954fde856db5d0bd7a60f56756c30aee7a41c5e6709a3c54392edc.png"
+                            alt="Dino Trevisani"
+                            class="w-20 h-20 rounded-full object-cover border-2 border-violet-400/20 flex-shrink-0">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Dino Trevisani</h3>
+                            <p class="text-violet-400 text-sm mt-1">Former President of IBM Canada | Current Senior Vice
+                                President, Tata Communication</p>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl p-8 border border-white/5 hover:border-violet-400/20 transition-all flex items-center gap-5"
+                       ><img
+                            src="https://dashboard.axiam.io/assets/duc-ngo-11738da3454d9322840f368864fb1fb40541fd0e5b443ebb37a73ff5ca25899f.png"
+                            alt="Duc Ngo"
+                            class="w-20 h-20 rounded-full object-cover border-2 border-violet-400/20 flex-shrink-0">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Duc Ngo</h3>
+                            <p class="text-violet-400 text-sm mt-1">Senior Scientist | Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-12"><span
+                        class="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-4 block flex items-center justify-center gap-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-handshake w-4 h-4">
+                            <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
+                            <path
+                                d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4">
+                            </path>
+                            <path d="m21 3 1 11h-2"></path>
+                            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
+                            <path d="M3 4h8"></path>
+                        </svg> Partnerships</span>
+                    <h2 class="text-3xl font-bold text-white">Backed by leading institutions</h2>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-12">
+                    <div class="glass rounded-2xl p-8 border border-white/5 flex items-center justify-center"><img
+                            src="https://dashboard.axiam.io/assets/McMaster-University-logo-e66e0690f7c9e3ead561ddea33e56fd5a88d5e3cc6a9f06b1a1d232995dc2d59.png"
+                            alt="McMaster University"
+                            class="h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"></div><a
+                        href="https://theforge.mcmaster.ca/startups/axiam-ai/" target="_blank" rel="noreferrer"
+                        class="glass rounded-2xl p-8 border border-white/5 flex items-center justify-center hover:border-cyan-400/20 transition-all"><img
+                            src="https://dashboard.axiam.io/assets/the_forge_logo-505212fdadaf58d2de7faad323778ddab6ab7c96f7bb055b452cfcb2638b49c2.png"
+                            alt="The Forge"
+                            class="h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"></a>
+                </div>
+            </div>
+        </section>
+        <section class="py-24">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-white mb-6">Ready to secure your organization?</h2>
+                    <p class="text-slate-400 text-lg mb-8">Start a 30-day free trial — no credit card, no commitment.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center"><a
+                            class="inline-flex items-center gap-2 px-10 py-5 rounded-xl font-bold text-[#080C14] bg-cyan-400 hover:bg-cyan-300 transition-all glow-cyan text-lg"
+                            href="/trial">Start Free Trial <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-arrow-right w-5 h-5">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg></a><a
+                            class="inline-flex items-center gap-2 px-10 py-5 rounded-xl font-bold text-white glass border border-white/10 hover:border-cyan-400/30 transition-all text-lg"
+                            href="/contact">Talk to Sales</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- BEGIN: MainFooter -->
+    <footer class="border-t border-white/5 bg-[#050810]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scan w-5 h-5 text-white">
+                                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">The future of enterprise authentication. Secure,
+                        seamless, instant.</p>
+                    <div class="flex items-center gap-2 mt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shield w-4 h-4 text-cyan-400">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                            </path>
+                        </svg><span class="text-xs text-slate-500">SOC 2 Type II Certified</span></div>
+                    <div class="flex items-center gap-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock w-4 h-4 text-violet-400">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg><span class="text-xs text-slate-500">ISO 27001 Compliant</span></div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="features.html">Features</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="pricing.html">Pricing</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Security</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Integrations</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">API
+                                Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="about.html">About</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Contact</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Careers</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Privacy Policy</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Terms of Service</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">GDPR</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-600 text-sm">© 2026 Axiam Technologies Inc. All rights reserved.</p>
+                <p class="text-slate-600 text-sm">Built for the enterprise. Secured to the core.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END: MainFooter -->
+</body>
+
+</html>

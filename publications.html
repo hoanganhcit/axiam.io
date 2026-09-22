@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Axiam - Publication Hub</title>
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="js/main.js"></script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="min-h-screen text-slate-300 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+  <!-- BEGIN: MainHeader -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/80 backdrop-blur-md border-b border-slate-800/60"
+    data-purpose="site-navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a aria-label="Axiam Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+                <div
+                    class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scan w-5 h-5 text-white">
+                        <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                        <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                        <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+            </a>
+      <!-- Desktop Nav Items -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-cyan-400 transition-colors" href="features.html">Features</a>
+        <a class="hover:text-cyan-400 transition-colors" href="pricing.html">Pricing</a>
+        <a class="text-[#00e5ff] font-semibold transition-colors" href="publications.html">Publications</a>
+        <a class="hover:text-cyan-400 transition-colors" href="case-study.html">Case Study</a>
+        <a class="hover:text-cyan-400 transition-colors" href="about.html">About</a>
+        <a class="hover:text-cyan-400 transition-colors" href="contact.html">Contact</a>
+      </nav>
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline-block"
+          href="#">Sign In</a>
+        <a class="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.6)]"
+          href="trial.html">
+          <span>Start Free Trial</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2.5" viewbox="0 0 24 24">
+            <line x1="5" x2="19" y1="12" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="pt-36 pb-20 relative overflow-hidden">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/5 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <!-- Pill Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#1d3557] bg-[#081b30] text-xs font-medium text-[#7dd3fc] mb-6">
+          <svg class="w-3.5 h-3.5 text-[#38bdf8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <span>Research &amp; Insights</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+          Publication <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-[#38bdf8]">Hub</span>
+        </h1>
+        <!-- Subtitle -->
+        <p class="text-slate-400 text-base sm:text-lg font-normal">
+          Publish research papers &amp; articles
+        </p>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: PinnedHeroCard -->
+    <section class="py-6 pb-12" data-purpose="pinned-white-paper">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="relative glass rounded-2xl p-8 border border-violet-400/20 overflow-hidden"
+          style="opacity: 1; transform: none;">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-cyan-400/5 pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-2 mb-4"><span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-400/15 text-violet-400 text-xs font-bold uppercase tracking-widest"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-pin w-3 h-3">
+                  <path d="M12 17v5"></path>
+                  <path
+                    d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z">
+                  </path>
+                </svg> Pinned White Paper</span></div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3 leading-snug">Why Online Hacking Will Continue to
+              Increase if Anonymous Online Users Are Still Allowed</h2>
+            <p class="text-slate-500 text-sm mb-4">John Kumar · Jan 08, 2025</p>
+            <p class="text-slate-400 leading-relaxed mb-5">In today's digital world, cybersecurity has become a constant
+              battlefield. Organizations invest billions of dollars annually in advanced firewalls, intrusion detection
+              systems, and multi-factor authentication (MFA). Yet, despite all these defenses, hackers continue to
+              thrive. The reason is simple: the foundation of online identity remains broken. As long as cyberspace
+              continues to rely on anonymous users identified only by usernames, passwords, and MFA codes, online
+              hacking will not just persist—it will grow.</p>
+            <div class="flex flex-wrap gap-2 mb-6"><span
+                class="text-xs text-slate-500 glass px-2.5 py-1 rounded-full border border-white/5">user account
+                takeovers</span><span
+                class="text-xs text-slate-500 glass px-2.5 py-1 rounded-full border border-white/5">anonymous
+                users</span><span
+                class="text-xs text-slate-500 glass px-2.5 py-1 rounded-full border border-white/5">stole
+                credentials</span><span
+                class="text-xs text-slate-500 glass px-2.5 py-1 rounded-full border border-white/5">anonymity is
+                protected online</span></div>
+            <div class="flex items-center gap-4"><button
+                class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-cyan-400 text-[#080C14] text-sm font-bold hover:bg-cyan-300 transition-colors">Read
+                article <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-arrow-right w-4 h-4">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg></button><a href="https://dashboard.axiam.io/posts/6.pdf" target="_blank" rel="noreferrer"
+                class="inline-flex items-center gap-1.5 text-slate-400 text-sm font-medium hover:text-white transition-colors"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-download w-4 h-4">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg> Download PDF</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: PinnedHeroCard -->
+    <!-- BEGIN: FilterAndSearch -->
+    <section class="pb-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-10"
+          data-purpose="filter-controls">
+          <!-- Filter Tabs -->
+          <div class="flex items-center gap-2">
+            <button type="button" data-filter="all" aria-pressed="true"
+              class="px-5 py-2 rounded-lg text-sm font-semibold bg-[#0e3b5e] text-[#00e5ff] border border-[#00e5ff]/30 shadow-sm">
+              All
+            </button>
+            <button type="button" data-filter="white paper" aria-pressed="false"
+              class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-[#07192f] transition-all">
+              White papers
+            </button>
+            <button type="button" data-filter="article" aria-pressed="false"
+              class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-[#07192f] transition-all">
+              Articles
+            </button>
+          </div>
+          <!-- Search Box -->
+          <div class="relative min-w-[260px] sm:w-80">
+            <input id="publication-search"
+              class="w-full bg-[#061425] border border-[#11243b] text-sm text-slate-200 placeholder-slate-500 rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-all"
+              placeholder="Search publications..." type="search" autocomplete="off" />
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: FilterAndSearch -->
+    <!-- BEGIN: PublicationCardsGrid -->
+    <section class="pb-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-purpose="publication-cards-grid">
+          <!-- Card 1 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <!-- Type and Date -->
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Sep 10, 2026</span>
+              </div>
+              <!-- Headline -->
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                iDSan Breach: 153 Million Driver's Licenses Stolen — When Stored Identity Becomes the Target
+              </h3>
+              <!-- Authors -->
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar, Chris Singh
+              </p>
+              <!-- Snippet -->
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                On September 10, 2026, identity verification giant iDSan confirmed that hackers stole more than 153
+                million
+                driver's licenses from its cloud systems, with the data offered for sale on a dark-web service called
+                Nexus.
+                Krebs on Security called it the largest driver's license breach ever recorded. The incident exposes a
+                structural weakness:...
+              </p>
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">iDSan
+                  Breach</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Identity
+                  Document Theft</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">153M
+                  Driver's Licenses</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Biometric
+                  Templates vs Stored Documents</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Liveness</span>
+              </div>
+            </div>
+            <!-- Footer Actions -->
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Aug 31, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Mirage2FA: The Phishing Kit That Steals Your Session After MFA Says Yes
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Robert Nowak, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In August 2026, a phishing-as-a-service kit called Mirage2FA surged across the US and EU, targeting at
+                least
+                4,532 organizations and logging over 9,000 session-theft events against Microsoft 365 users. Unlike
+                traditional credential phishing, Mirage2FA doesn't try to defeat MFA — it lets the victim complete MFA
+                successfully, then steals...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Mirage2FA</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">AiTM
+                  Phishing</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">MFA
+                  Bypass</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Session
+                  Cookie Theft</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Microsoft
+                  365</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Liveness</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Aug 24, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Keycloak Password-Reset Flaw Lets Attackers Reset Any Account — Including Admins
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                On August 24, 2026, researchers disclosed a critical vulnerability (CVE-2026-18963, CVSS 9.1) in
+                Keycloak's
+                password-recovery flow that allows a remote, unauthenticated attacker to reset any user's password —
+                including administrators'. The flaw undermines the entire premise of password security: no matter how
+                strong...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Keycloak
+                  CVE-2026-18963</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Password
+                  Reset Attack</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Account
+                  Recovery Flaw</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Identity
+                  Provider Compromise</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Facial Verification</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jul 16, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Abbott Laboratories Breached by a Single Vishing Call — When Credentials Walk Out the Door
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar, George Nguyen
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                On July 16, 2026, Abbott Laboratories disclosed that its Cancer Diagnostics business was breached
+                through a
+                vishing (voice phishing) attack in which a single employee was tricked over the phone into handing over
+                login credentials for a Microsoft Entra single sign-on account. That one credential set reportedly
+                unlocked
+                Abbott's internal...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Abbott
+                  Vishing</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">ShinyHunters</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">SSO
+                  Credential Theft</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Social
+                  Engineering</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Liveness</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">10.9M
+                  Emails</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 5 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jul 07, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                KDDI Breach Exposes 14.2 Million Email Credentials Across Six Japanese ISPs
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Robert Nowak, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                On July 7, 2026, Japanese telecommunications giant KDDI Corporation disclosed a data breach affecting up
+                to
+                14.2 million email accounts across six Japanese internet service providers, with 12,231,954 email
+                addresses
+                and 7,616,173 passwords accessed without authorization. The breach, detected on June 17, exploited a...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">KDDI
+                  Breach</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">14.2M
+                  Credentials</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Email
+                  Password Theft</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Japanese
+                  ISPs</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Facial Sign-In</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 6 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jun 19, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Chick-fil-A Accounts Fried in Credential Stuffing — Why Password Reuse Keeps Burning
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Christina Nguyen
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Between June 17 and 19, 2026, attackers ran an automated credential stuffing attack against
+                Chick-fil-A's
+                website and mobile app, using login credentials stolen from a third-party source to access Chick-fil-A
+                One
+                loyalty accounts. The breach, disclosed in July 2026, exposed customer names, email addresses, mobile
+                pay
+                numbers, accou...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Chick-fil-A
+                  Breach</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Credential
+                  Stuffing</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Password
+                  Reuse</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Account
+                  Takeover</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Facial Sign-In</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 7 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jun 20, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                24 Billion Stolen Credentials Exposed in Open Database — The Largest Infostealer Dump Yet
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In June 2026, Have I Been Pwned added a collection of accumulated infostealer logs containing 24 billion
+                stolen credential records and 124 million unique passwords, all found in a publicly accessible
+                Elasticsearch
+                database. The dump included plaintext passwords, session cookies, and tokens — the raw material for mass
+                account...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">24B
+                  Credentials</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Infostealer
+                  Logs</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">HIBP
+                  June
+                  2026</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Account
+                  Takeover</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Passwordless</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Session
+                  Cookies</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 8: White Paper -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#2a143d] text-[#c084fc] font-semibold border border-[#a855f7]/40">White paper</span>
+                <span class="text-slate-500">May 04, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Preventing Large-Scale Data Breaches in Alberta Through Facial Sign-In as a Service
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In April 2026, Alberta experienced a major privacy incident involving the provincial List of Electors.
+                According to Alberta's Information and Privacy Commissioner, more than 2.9 million Albertans had
+                personal
+                information breached, including home addresses and phone numbers in some cases. The Commissioner warned
+                that
+                this created a r...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Alberta
+                  Data Breach</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Facial
+                  Sign-In Authentication</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Voter
+                  Data Privacy</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Biometric
+                  Identity Assurance</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Cybersecurity</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 9 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jan 31, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Passwords Are Still the Weakest Link—Axiam "Sign In with Face in Light" Fixes That
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In late January 2026, WIRED reported an exposed database containing 149 million usernames and passwords,
+                spanning accounts from email and social media to banking and government systems. The report noted signs
+                the
+                data was collected through info stealing malware and kept in a format designed for easy searching and...
+              </p>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 10 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Jan 14, 2026</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                New Year, New Breach: What the BreachForums Leak Teaches Us About Authentication and Accountability
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Christina Nguyen, John Kumar
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In early January 2026, the notorious underground hacking community BreachForums suffered a significant
+                data
+                breach that exposed nearly 324,000 user accounts, including usernames, email addresses, hashed
+                passwords,
+                registration metadata, IP address history, and other internal data from its MyBB-based forum backend:...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">When
+                  Passwords Fail Faces Don't</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">324000
+                  Exposed, Identity Matters</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Beyond
+                  Passwords Toward Identity</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">New
+                  Breach, New Way to Authenticate</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Leaks
+                  Expose Data, Faces Expose Truth</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 11: White Paper -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#2a143d] text-[#c084fc] font-semibold border border-[#a855f7]/40">White paper</span>
+                <span class="text-slate-500">Dec 29, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                The FBI Internet Crime Complaint Center (IC3) — Stopping Impersonation at the Front Gate
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Malicious actors are increasingly impersonating senior U.S. government officials via smishing (SMS
+                phishing)
+                and vishing (voice phishing) to establish trust, gain access to accounts, and propagate deception across
+                target networks. These attacks exploit weaknesses in legacy authentication methods and are amplified by
+                AI-generated au...
+              </p>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 12 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Dec 18, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Cyberattack Hits Rainbow District School Board: User Accounts and Personal Data Compromised — Could
+                Face-based Sign-In Have Prevented It?
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Christina Nguyen, Robert Nowak
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                In a significant cybersecurity incident that affected thousands of individuals, the Rainbow District
+                School
+                Board (RDSB) in Sudbury, Ontario confirmed that a cyber-attack on its systems on February 7, 2025
+                resulted
+                in unauthorized access to sensitive data, including user accounts and personal information belonging to
+                staff, students...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Cybersecurity
+                  Breach</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Education
+                  Data Privacy</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Account
+                  Takeover Prevention</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Biometric
+                  Authentication</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 13 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Dec 03, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                How Freedom Mobile Could Have Prevented and Identified Their Account Takeover with Axiam Sign in with
+                Face
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, John Kumar
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Account takeover (ATO) attacks continue to rise across telecommunications companies. Freedom Mobile's
+                December 2025 privacy notice revealed that unauthorized access occurred through a compromised
+                subcontractor
+                account. Traditional credential-based systems—passwords, PINs, and even SMS-based MFA...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Account
+                  Takeover Prevention</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Biometric
+                  Authentication</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Telecom
+                  Security</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Axiam
+                  Sign in with Face</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 14 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Oct 20, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Facial Authentication: The Future of Account Takeover Protection in Payments
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Robert Nowak, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Account Takeover (ATO) remains one of the most dangerous threats facing digital payment systems today.
+                Fraudsters exploit stolen credentials, social engineering, and technical loopholes to assume control of
+                legitimate user accounts. Once inside, they execute fraudulent transactions that are often
+                indistinguishable
+                from genuine user...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">ATO</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Bot
+                  Networks</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Credential
+                  Stuffing</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Malware
+                  harvests keystrokes</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Malicious
+                  Apps</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Email
+                  Compromise</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 15 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Oct 01, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                How Axiam Facial Sign-In Could Help Prevent Fraud in Ontario's Health-Care System
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Robert Nowak, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                (OHIP), misuse of health cards, billing for services not rendered, or individuals accessing
+                publicly-funded
+                services when not eligible. These types of fraud not only...
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Health-Card
+                  /
+                  Identity Misuse</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Unauthorized
+                  Provider</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Phantom
+                  Billing</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">Virtual
+                  Care Fraud</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+          <!-- Card 16 -->
+          <article
+            class="bg-[#061425] border border-[#11243b] rounded-xl p-6 sm:p-7 flex flex-col justify-between card-border-glow">
+            <div>
+              <div class="flex items-center gap-2.5 text-xs mb-3.5">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#0a2e4c] text-[#38bdf8] font-semibold border border-[#0284c7]/40">Article</span>
+                <span class="text-slate-500">Sep 18, 2025</span>
+              </div>
+              <h3
+                class="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-2 hover:text-[#00e5ff] transition-colors cursor-pointer">
+                Mid September 2025 Threat Intelligence Brief
+              </h3>
+              <p class="text-xs text-slate-400 mb-3.5">
+                Henry Quach, Chris Singh
+              </p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                government services.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-[#081a2f] text-slate-300 border border-[#102742]">threats
+                  to supply chains</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold pt-2 ">
+              <a class="inline-flex items-center text-[#00e5ff] hover:underline" href="#">
+                Read article →
+              </a>
+              <a class="inline-flex items-center gap-1 text-slate-400 hover:text-white" href="#">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                  <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                PDF
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- END: PublicationCardsGrid -->
+  </main>
+  <!-- BEGIN: MainFooter -->
+  <footer class="border-t border-white/5 bg-[#050810]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scan w-5 h-5 text-white">
+                                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">Axi<span class="gradient-text">am</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">The future of enterprise authentication. Secure,
+                        seamless, instant.</p>
+                    <div class="flex items-center gap-2 mt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shield w-4 h-4 text-cyan-400">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                            </path>
+                        </svg><span class="text-xs text-slate-500">SOC 2 Type II Certified</span></div>
+                    <div class="flex items-center gap-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock w-4 h-4 text-violet-400">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg><span class="text-xs text-slate-500">ISO 27001 Compliant</span></div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="features.html">Features</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="pricing.html">Pricing</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Security</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Integrations</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">API
+                                Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="about.html">About</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Contact</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Careers</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="contact.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Privacy Policy</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Terms of Service</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">GDPR</a></li>
+                        <li><a class="text-slate-500 hover:text-cyan-400 text-sm transition-colors"
+                                href="api-docs.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-600 text-sm">© 2026 Axiam Technologies Inc. All rights reserved.</p>
+                <p class="text-slate-600 text-sm">Built for the enterprise. Secured to the core.</p>
+            </div>
+        </div>
+    </footer>
+  <!-- END: MainFooter -->
+</body>
+
+</html>
