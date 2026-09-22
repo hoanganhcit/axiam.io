@@ -353,6 +353,7 @@ function initializePricingCalculator() {
   const pricePerMau = document.getElementById('price-per-mau');
   const estimatedMonthly = document.getElementById('est-monthly');
   const tierName = document.getElementById('tier-name');
+  const mauStages = [5000, 10000, 25000, 50000, 100000, 200000, 500000];
   const tags = {
     free: document.getElementById('tag-free'),
     payg: document.getElementById('tag-payg'),
@@ -368,7 +369,8 @@ function initializePricingCalculator() {
   };
 
   const updateCalculator = () => {
-    const value = Number.parseInt(slider.value, 10);
+    const stage = Number.parseInt(slider.value, 10);
+    const value = mauStages[stage] || mauStages[0];
     let unitPrice;
     let tier;
     let calculatedTotal;
@@ -396,13 +398,13 @@ function initializePricingCalculator() {
       activeTag = tags.scale;
     }
 
-    mauDisplay.textContent = value.toLocaleString();
-    pricePerMau.textContent = `$${unitPrice.toFixed(2)}`;
-    estimatedMonthly.textContent = `$${Math.round(calculatedTotal).toLocaleString()}`;
+    mauDisplay.textContent = value.toLocaleString('de-DE');
+    pricePerMau.textContent = unitPrice === 0 ? 'Free' : `$${unitPrice.toFixed(2)}`;
+    estimatedMonthly.textContent = `$${Math.round(calculatedTotal).toLocaleString('de-DE')}`;
     tierName.textContent = tier;
     setActiveTag(activeTag);
 
-    const percentage = ((value - slider.min) / (slider.max - slider.min)) * 100;
+    const percentage = (stage / (mauStages.length - 1)) * 100;
     slider.style.background = `linear-gradient(to right, #00e5ff 0%, #00e5ff ${percentage}%, #1e293b ${percentage}%, #1e293b 100%)`;
   };
 
