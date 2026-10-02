@@ -162,9 +162,12 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeSectionFadeIn() {
-  const animatedElements = [...document.querySelectorAll('section > div')];
+  // Wrappers containing a [data-stagger] list are skipped so each list item can reveal on its own.
+  const animatedElements = [...document.querySelectorAll('section > div')]
+    .filter((element) => !element.querySelector('[data-stagger]'));
+  const staggerItems = [...document.querySelectorAll('[data-stagger] > *')];
 
-  if (!animatedElements.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return;
   }
 
@@ -172,19 +175,34 @@ function initializeSectionFadeIn() {
     element.classList.add('fade-in-up');
     element.style.transitionDelay = `${Math.min(index % 4, 3) * 80}ms`;
   });
+  staggerItems.forEach((element) => element.classList.add('fade-in-up'));
+
+  const clearDelay = (event) => {
+    if (event.target !== event.currentTarget || event.propertyName !== 'opacity') return;
+    event.currentTarget.style.removeProperty('transition-delay');
+    event.currentTarget.removeEventListener('transitionend', clearDelay);
+  };
 
   const observer = new IntersectionObserver((entries, sectionObserver) => {
+    let staggerIndex = 0;
+
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         return;
       }
 
-      entry.target.classList.add('is-visible');
-      sectionObserver.unobserve(entry.target);
+      const element = entry.target;
+      if (element.parentElement?.hasAttribute('data-stagger')) {
+        element.style.transitionDelay = `${Math.min(staggerIndex++, 8) * 120}ms`;
+      }
+      element.addEventListener('transitionend', clearDelay);
+      element.classList.add('is-visible');
+      sectionObserver.unobserve(element);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+  // threshold 0 so blocks taller than the viewport (e.g. long legal pages) still reveal.
+  }, { threshold: 0, rootMargin: '0px 0px -40px' });
 
-  animatedElements.forEach((element) => observer.observe(element));
+  [...animatedElements, ...staggerItems].forEach((element) => observer.observe(element));
 }
 
 function initializePublicationModal() {
